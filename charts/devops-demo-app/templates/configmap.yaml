@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.app.name }}-config
+  labels:
+    app: {{ .Values.app.name }}
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>{{ .Values.app.title }}</title>
+    </head>
+    <body>
+      <h1>Welcome to {{ .Values.app.title }}!</h1>
+      <p>{{ .Values.app.message }}</p>
+      <p>Deployment Strategy: GitOps with Helm</p>
+    </body>
+    </html>
