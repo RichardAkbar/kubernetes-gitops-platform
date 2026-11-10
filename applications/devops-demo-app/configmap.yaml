@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops-demo-config
+  labels:
+    app: devops-demo-app
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Kubernetes GitOps Platform</title>
+    </head>
+    <body>
+      <h1>Welcome to Kubernetes GitOps Platform!</h1>
+      <p>Application managed by ArgoCD and Kubernetes.</p>
+      <p>Deployment Strategy: GitOps</p>
+    </body>
+    </html>
