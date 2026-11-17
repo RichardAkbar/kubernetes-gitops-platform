@@ -2,7 +2,7 @@ Kubernetes GitOps Platform
 Implementasi GitOps pada Kubernetes menggunakan ArgoCD, Helm, dan GitHub untuk mengotomatisasi proses deployment aplikasi, sinkronisasi konfigurasi, pemulihan otomatis, dan rollback.
 
 2. Architecture Diagram
-![alt text](../../arsitttektur.png)
+![alt text](arsitttektur.png)
 
 Diagram berikut menggambarkan alur deployment aplikasi menggunakan Kubernetes, Helm, GitHub, dan ArgoCD.
 
@@ -34,7 +34,7 @@ Pod aplikasi berstatus Running.
 Service dan ConfigMap berhasil dibuat.
 Bukti Screenshot:
 
-![alt text](<../../kube cluster.png>)
+![alt text](<kube cluster.png>)
 
 C. Pengambilan Screenshot Dashboard ArgoCD
 Screenshot 02 — ArgoCD Dashboard
@@ -47,10 +47,10 @@ Cari aplikasi devops-demo-app.
 Pastikan status aplikasi menunjukkan Synced dan Healthy.
 Ambil screenshot halaman tersebut.
 Tempat Screenshot:
-![alt text](../../Dashboard.png)
+![alt text](Dashboard.png)
 
 Screenshot 03 — ArgoCD Resource Tree
-![alt text](<../../argo resourccce tree.png>)
+![alt text](<argo resourccce tree.png>)
 
 Langkah pengambilan gambar:
 
@@ -65,7 +65,7 @@ ConfigMap devops-demo-app-config
 Ambil screenshot tampilan Resource Tree.
 Tempat Screenshot:
 
-![alt text](../../pengujian.png)
+![alt text](pengujian.png)
 
 Hasil Pengujian
 ArgoCD berhasil terhubung dengan repository GitHub.
@@ -92,7 +92,7 @@ Repository sumber berasal dari GitHub.
 Deployment dikelola oleh ArgoCD.
 
 Bukti Screenshot:
-![alt text](../../deploymenr.png)
+![alt text](deploymenr.png)
 
 1. Validasi Helm Chart
 Tujuan: Memastikan Helm Chart dapat divalidasi dan menghasilkan manifest Kubernetes dengan benar.
@@ -115,7 +115,7 @@ Helm berhasil menghasilkan manifest.
 Manifest Deployment, Service, dan ConfigMap tersedia.
 
 Bukti Screenshot:
-![alt text](<../../helm charrt.png>)
+![alt text](<helm charrt.png>)
 
 1. Pengujian Automated Sync
 Tujuan: Memastikan perubahan konfigurasi yang dikirim ke GitHub diterapkan secara otomatis oleh ArgoCD ke Kubernetes.
@@ -144,7 +144,7 @@ Jumlah replica berubah dari 2 menjadi 3.
 Tiga Pod aplikasi berstatus Running.
 ArgoCD melakukan sinkronisasi otomatis tanpa menekan tombol Sync secara manual.
 Bukti Screenshot:
-![alt text](<../../automatedd synron.png>)
+![alt text](<automatedd synron.png>)
 
 
 1. Pengujian Self-Healing
@@ -172,7 +172,7 @@ ArgoCD menjalankan proses Self-Healing.
 Image kembali ke nginx:1.27.
 Aplikasi kembali berstatus Synced dan Healthy.
 Bukti Screenshot:
-![alt text](<../../self healing.png>)
+![alt text](<self healing.png>)
 
 1. Pengujian Git Rollback
 Tujuan: Memastikan perubahan konfigurasi dapat dikembalikan ke versi sebelumnya melalui Git dan diterapkan otomatis oleh ArgoCD.
@@ -205,12 +205,12 @@ Dua Pod aplikasi berstatus Running.
 ArgoCD menggunakan revision rollback terbaru.
 Aplikasi kembali berstatus Synced dan Healthy.
 Bukti Screenshot:
-![alt text](<../../git rllback.png>)
+![alt text](<git rllback.png>)
 
 
 1. Hasil Akhir Proyek
 Pemeriksaan akhir seluruh komponen:
-![alt text](<../../hasil akhir.png>)
+![alt text](<hasil akhir.png>)
 
 kubectl get nodes
 kubectl get deployment,pods,svc,configmap -n default
